@@ -8,12 +8,6 @@ const CodeEditor = dynamic(
   { ssr: false }
 );
 
-
-const CodeEditor = dynamic(() => import("../../components/CodeEditor"), {
-  ssr: false,
-});
-
-
 type Mode = "beginner" | "advanced";
 
 type Mistake = {
@@ -992,6 +986,7 @@ function formatMistakes(list: Mistake[]) {
     .map((m, i) => `${i + 1}. ${m.title}\n- Why: ${m.why}\n- Fix: ${m.fix}\n`)
     .join("\n");
 }
+
 
 
 
